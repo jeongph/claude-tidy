@@ -1,5 +1,8 @@
 # claude-tidy
 
+[![version](https://img.shields.io/github/v/release/jeongph/claude-tidy?label=version&color=blue)](https://github.com/jeongph/claude-tidy/releases)
+[![license](https://img.shields.io/github/license/jeongph/claude-tidy?color=lightgrey)](LICENSE)
+
 세션 마무리 정리와 핸드오프를 위한 Claude Code 플러그인.
 
 작업이 끝난 것 같을 때 "세션 정리해줘" 한마디로 — 커밋 누락, 히스토리 미기록, 문서 누락, 이슈 갱신 누락, 잊힌 작업, 워크트리 유실 위험 문서까지 검사한다. 컨텍스트가 사라지면 "빠뜨렸다는 사실" 자체를 잊는다. 그 전에 잡는다.
