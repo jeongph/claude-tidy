@@ -1,7 +1,7 @@
 {
   "name": "claude-tidy",
   "version": "0.1.0",
-  "description": "세션 마무리 정리와 핸드오프 — 커밋·히스토리·문서·이슈 누락을 검사하고, 워크트리 문서를 이관하며, 다음 세션이 이어받을 상태를 남긴다",
+  "description": "작업을 마칠 때 빠진 커밋, 문서, 이슈 처리를 확인하고 다음 세션에 넘길 내용을 정리합니다.",
   "author": { "name": "JeongUk Park", "url": "https://github.com/jeongph" },
   "homepage": "https://github.com/jeongph/claude-tidy",
   "repository": "https://github.com/jeongph/claude-tidy",
