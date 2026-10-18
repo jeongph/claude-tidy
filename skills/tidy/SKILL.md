@@ -1,11 +1,11 @@
 ---
 name: tidy
-description: 'Use when a work session seems finished and the user wants to tidy up before closing — verifying nothing was left behind. 사용자가 "세션 정리해줘", "세션 정리", "마무리 정리", "정리하고 끝내자", "빠뜨린 거 없나 확인해줘", "tidy up", "wrap up the session"이라고 할 때. 커밋·푸시 누락, 작업 히스토리 미기록, intent/knowledge 문서 누락, 이슈 갱신 누락, 세션 중 잊힌 작업, 워크트리 유실 위험 문서를 검사하고 체크리스트로 보고한다.'
+description: 'Use when a work session seems finished and the user wants to tidy up before closing — verifying nothing was left behind. 사용자가 "세션 정리해줘", "세션 정리", "마무리 정리", "정리하고 끝내자", "빠뜨린 거 없나 확인해줘", "tidy up", "wrap up the session"이라고 할 때. 커밋과 푸시 누락, 작업 히스토리 미기록, intent/knowledge 문서 누락, 이슈 갱신 누락, 세션 중 잊힌 작업, 워크트리 유실 위험 문서를 검사하고 체크리스트로 보고한다.'
 ---
 
-# Tidy — 세션 마무리 정리
+# Tidy: 세션 마무리 정리
 
-세션을 닫기 전에 **흘린 것이 없는지** 검사하는 규율이다. 컨텍스트가 사라지면 "빠뜨렸다는 사실" 자체를 잊는다 — 그 전에 잡는다.
+세션을 닫기 전에 **흘린 것이 없는지** 검사하는 절차다. 컨텍스트가 사라지면 "빠뜨렸다는 사실" 자체를 잊으므로 그 전에 잡는다.
 
 핵심 원칙:
 - **검사가 먼저, 처리는 확인 후.** 발견한 문제를 임의로 수정하지 않는다. 보고하고, 사용자가 승인한 항목만 처리한다.
@@ -18,7 +18,7 @@ description: 'Use when a work session seems finished and the user wants to tidy 
 
 ### 1. 체크 로드 및 감지
 
-`checks/` 디렉토리의 모든 `.md` 파일을 읽는다. 각 파일의 **감지 조건** 섹션을 현재 프로젝트·세션에 대해 평가해 수행할 체크 목록을 확정한다.
+`checks/` 디렉토리의 모든 `.md` 파일을 읽는다. 각 파일의 **감지 조건** 섹션을 현재 프로젝트와 세션에 대해 평가해 수행할 체크 목록을 확정한다.
 
 ### 2. 체크 실행
 
@@ -42,7 +42,7 @@ description: 'Use when a work session seems finished and the user wants to tidy 
 
 ### 4. 처리
 
-⚠️ 항목마다 처리 방법을 제안하고, 사용자가 승인한 것만 실행한다. 커밋·이슈 코멘트·외부 기록처럼 **밖으로 나가는 작업은 반드시 내용을 먼저 보여주고** 확인받는다.
+⚠️ 항목마다 처리 방법을 제안하고, 사용자가 승인한 것만 실행한다. 커밋, 이슈 코멘트, 외부 기록처럼 **밖으로 나가는 작업은 반드시 내용을 먼저 보여주고** 확인받는다.
 
 ---
 
