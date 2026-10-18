@@ -1,5 +1,5 @@
 ---
-description: 세션 마무리 정리 — 커밋·히스토리·문서·이슈 누락 검사, 잊힌 작업·워크트리 유실 문서 확인
+description: 세션 마무리 정리 (커밋, 히스토리, 문서, 이슈 누락 검사, 잊힌 작업과 워크트리 유실 문서 확인)
 allowed-tools: [Bash, Read, Grep, Glob, Write, Edit, Task]
 ---
 

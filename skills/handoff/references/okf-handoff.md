@@ -1,6 +1,6 @@
 # OKF 프로젝트 핸드오프 절차
 
-`docs/knowledge/`를 쓰는 OKF(Open Knowledge Format) 프로젝트에서 handoff 단계 3(상황 기록)이 따르는 절차. (claude-okf 플러그인의 handoff에서 이관됨)
+`docs/knowledge/`를 쓰는 OKF(Open Knowledge Format) 프로젝트에서 handoff 단계 3(상황 기록)이 따르는 절차다. (claude-okf 플러그인의 handoff에서 이관됨)
 
 ## 3층 모델 (섞지 않는다)
 
@@ -14,11 +14,11 @@
 
 ## 1) 완료 작업 마감 → History 노드
 
-이번 세션에 완료된 작업 단위 중 `docs/history/`에 노드가 없는 것을 찾아 초안한다.
+이번 세션에 완료된 작업 단위 중 `docs/history/`에 노드가 없는 것을 찾아 초안을 작성한다.
 
-- 파일명·frontmatter·본문(Why→How→What)은 프로젝트의 히스토리 컨벤션을 따른다. 없으면 OKF authoring 스킬의 `type: History` 양식을 쓴다.
+- 파일명, frontmatter, 본문(Why→How→What)은 프로젝트의 히스토리 컨벤션을 따른다. 없으면 OKF authoring 스킬의 `type: History` 양식을 쓴다.
 - `timestamp`는 실제 시각을 조회해 기록한다: `date '+%Y-%m-%dT%H:%M:%S%z'`
-- 초안 후 커밋한다 (완료 작업이 여럿이면 작업 단위로 분리).
+- 초안을 작성한 뒤 커밋한다 (완료 작업이 여럿이면 작업 단위로 분리).
 
 ## 2) resume 노드 작성 / 갱신
 
@@ -66,15 +66,15 @@ status: in-progress | blocked | ready-to-resume
 ```
 
 - `resource`의 `<branch> @ <SHA>`가 staleness 감지 근거다.
-- 저장 시 OKF validate/update-index 훅이 있으면 자동 검증·색인된다.
+- 저장 시 OKF validate/update-index 훅이 있으면 자동으로 검증되고 색인된다.
 
 ## 3) 태스크 트래커 동기화
 
-1. **감지**: `.okf/handoff.yml` 설정이 있으면 그대로. 없으면 추정 — `gh`+GitHub 원격이면 github-issues, Notion MCP 연결 시 notion, `docs/tasks.md` 있으면 file, 아니면 none.
+1. **감지**: `.okf/handoff.yml` 설정이 있으면 그대로 따른다. 없으면 추정한다: `gh`+GitHub 원격이면 github-issues, Notion MCP 연결 시 notion, `docs/tasks.md` 있으면 file, 아니면 none.
 2. 추정 결과를 사용자에게 한 줄로 확인받는다.
-3. **동기화**: 진행 중 항목의 상태 전이 + 상태 코멘트(완료분·다음 액션 요약).
-4. **외부로 나가는 코멘트는 draft를 먼저 보여주고 확인**받는다 (설정 `auto: true`면 생략).
+3. **동기화**: 진행 중 항목의 상태 전이 + 상태 코멘트(완료분과 다음 액션 요약).
+4. **외부로 나가는 코멘트는 초안을 먼저 보여주고 확인받는다** (설정 `auto: true`면 생략).
 
 ## 개인 메모리와의 경계
 
-resume 노드(커밋·팀 공유 대상)와 개인 메모리 도구는 의존이 아니라 레이어다. 개인 메모리가 있으면 resume 노드 포인터 한 줄만 얹는다. **하드 의존을 만들지 않는다** — resume 노드가 SSOT다. 자격증명·개인정보는 resume 노드에 넣지 않는다.
+resume 노드(커밋·팀 공유 대상)와 개인 메모리 도구는 의존이 아니라 레이어다. 개인 메모리가 있으면 resume 노드 포인터 한 줄만 얹는다. **하드 의존을 만들지 않는다.** resume 노드가 SSOT다. 자격증명과 개인정보는 resume 노드에 넣지 않는다.
